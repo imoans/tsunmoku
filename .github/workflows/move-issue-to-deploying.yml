@@ -1,0 +1,14 @@
+name: moveToDeploying
+on:
+  push:
+    types: [release]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: GitHub Project Automation+
+        uses: alex-page/github-project-automation-plus@v0.1.1
+        with:
+          repo-token: '${{ secrets.GH_TOKEN }}'
